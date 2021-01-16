@@ -1,0 +1,52 @@
+{
+  "name": "use-string-diff",
+  "version": "1.0.0",
+  "description": "custom react hook to get the difference between two strings",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "esmodule": "dist/index.modern.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && microbundle build --no-sourcemap --compress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harout32/use-string-diff.git"
+  },
+  "keywords": [
+    "custom react hook",
+    "string difference",
+    "useStringDiff",
+    "two string",
+    "compare strings",
+    "useStringDifference",
+    "useStringCompare"
+  ],
+  "author": "harout32",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harout32/use-string-diff/issues"
+  },
+  "homepage": "https://github.com/harout32/use-string-diff#readme",
+  "dependencies": {
+    "diff": "^5.0.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.13.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.13"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
