@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useRef } from 'react';
 import * as Diff from 'diff';
-
 
 interface CompareResult {
     count: number;
@@ -10,8 +9,8 @@ interface CompareResult {
 }
 
 export const useStringDiff = (string: string = ''): CompareResult[] => {
-    const [state, setState] = useState(string);
-    const difference = Diff.diffChars(state, string);
-    setState(string);
+    const ref = useRef(string);
+    const difference = Diff.diffChars(ref.current, string);
+    ref.current = string;
     return difference;
 };
