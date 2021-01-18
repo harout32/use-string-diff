@@ -8,9 +8,14 @@ interface CompareResult {
     removed: boolean | undefined;
 }
 
-export const useStringDiff = (string: string = ''): CompareResult[] => {
-    const ref = useRef(string);
-    const difference = Diff.diffChars(ref.current, string);
-    ref.current = string;
+export const useStringDiff = (oldString: string = '', newString: string | undefined = undefined): CompareResult[] => {
+    let difference;
+    const ref = useRef(oldString);
+    if (newString) {
+        difference = Diff.diffChars(oldString, newString);
+    } else {
+        difference = Diff.diffChars(ref.current, oldString);
+        ref.current = oldString;
+    }
     return difference;
 };

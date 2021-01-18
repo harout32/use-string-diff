@@ -1,6 +1,6 @@
 {
   "name": "use-string-diff",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "custom react hook to get the difference between two strings",
   "source": "src/index.ts",
   "main": "dist/index.js",
