@@ -46,6 +46,9 @@
     "node": ">=10",
     "npm": ">=6"
   },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   }
