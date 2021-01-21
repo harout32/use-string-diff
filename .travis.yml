@@ -10,8 +10,7 @@ script:
 deploy:
   provider: npm
   email: harout.za.artin@gmail.com
-  api_key:
-    secure: $NPM_AUTH_TOKEN
+  api_key: "$NPM_AUTH_TOKEN"
   on:
     tags: true
     repo: harout32/use-string-diff
