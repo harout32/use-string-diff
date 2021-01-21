@@ -11,7 +11,7 @@ deploy:
   provider: npm
   email: harout.za.artin@gmail.com
   api_key:
-    secure: NPM_AUTH_TOKEN
+    secure: $NPM_AUTH_TOKEN
   on:
     tags: true
     repo: harout32/use-string-diff
