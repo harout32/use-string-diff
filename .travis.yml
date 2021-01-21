@@ -1,16 +1,13 @@
-language: node_js
-
-node_js:
-  - "12"
-
 script:
   - npm run build
 
 deploy:
   provider: npm
-  email: "harout.za.artin@gmail.com"
-  api_key: NPM_AUTH_TOKEN
-  skip_cleanup: true
+  email: harout.za.artin@gmail.com
+  api_key:
+    secure: NPM_AUTH_TOKEN
   on:
     tags: true
+    repo: harout32/use-string-diff
     branch: main
+  skip_cleanup: 'true'
