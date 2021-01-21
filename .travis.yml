@@ -10,6 +10,7 @@ deploy:
   provider: npm
   email: "harout.za.artin@gmail.com"
   api_key: NPM_AUTH_TOKEN
+  skip_cleanup: true
   on:
     tags: true
     branch: main
